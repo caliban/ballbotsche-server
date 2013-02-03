@@ -15,7 +15,7 @@
  */
 package ch.fancytools.ballbotsche.restresource;
 
-import ch.fancytools.ballbotsche.service.MockData;
+import ch.fancytools.ballbotsche.game.MockData;
 import javax.ejb.Stateless;
 import javax.inject.Inject;
 import javax.ws.rs.GET;

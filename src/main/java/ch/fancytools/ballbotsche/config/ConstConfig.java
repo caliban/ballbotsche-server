@@ -13,22 +13,17 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package ch.fancytools.ballbotsche.service;
-
-import com.google.common.base.Preconditions;
-import javax.ejb.Stateless;
+package ch.fancytools.ballbotsche.config;
 
 /**
  *
  * @author caliban
  */
-@Stateless
-public class MockData {
+public interface ConstConfig {
     
-    public boolean isPersonREgistered(String email)
-    {
-        Preconditions.checkNotNull(email);
-        return "a.b@c.d".equals(email);
-    }
     
+   String GAME_DAYS_KEY = "game.days";
+   String MIN_NO_OF_PLAYERS_KEY ="min.no.of.players";
+   String MAX_NO_OF_PLAYERS_KEY = "max.no.of.players";
+   
 }
