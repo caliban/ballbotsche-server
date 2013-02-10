@@ -37,6 +37,15 @@ public class Player {
     @OneToOne
     private Device device;
 
+    public Device getDevice() {
+        return device;
+    }
+
+    public void setDevice(Device device) {
+        this.device = device;
+    }
+
+    
     public long getId() {
         return id;
     }
