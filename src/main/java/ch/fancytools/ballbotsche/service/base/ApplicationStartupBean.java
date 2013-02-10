@@ -60,7 +60,7 @@ public class ApplicationStartupBean {
     }
 
     private void verifyApplicationSetup() {
-        Preconditions.checkNotNull(configBean, "wops, injection DOES not work, check for missing beans.xml");
+        Preconditions.checkNotNull(configBean, "wops, injection does NOT work, check for missing beans.xml");
         Preconditions.checkNotNull(configBean.getConfigForKey(ConstConfig.GAME_DAYS_KEY));
         Preconditions.checkNotNull(configBean.getConfigForKey(ConstConfig.MAX_NO_OF_PLAYERS_KEY));
         Preconditions.checkNotNull(configBean.getConfigForKey(ConstConfig.MIN_NO_OF_PLAYERS_KEY));

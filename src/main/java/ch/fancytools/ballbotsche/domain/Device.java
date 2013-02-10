@@ -15,6 +15,7 @@
  */
 package ch.fancytools.ballbotsche.domain;
 
+import java.io.Serializable;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -26,7 +27,7 @@ import javax.persistence.OneToOne;
  * @author caliban
  */
 @Entity
-public class Device {
+public class Device implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
