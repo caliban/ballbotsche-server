@@ -22,7 +22,7 @@ import com.google.common.collect.Lists;
 import java.util.List;
 import javax.ejb.Asynchronous;
 import javax.ejb.LocalBean;
-import javax.ejb.Stateless;
+import javax.ejb.Stateful;
 import javax.enterprise.event.Observes;
 import javax.enterprise.inject.Instance;
 import javax.inject.Inject;
@@ -31,7 +31,7 @@ import javax.inject.Inject;
  *
  * @author caleb
  */
-@Stateless
+@Stateful
 @LocalBean
 public class AsyncPushBean {
 

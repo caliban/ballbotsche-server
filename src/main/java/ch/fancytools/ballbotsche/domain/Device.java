@@ -38,7 +38,7 @@ public class Device implements Serializable {
 
     public enum KindOfDeviceEnum {
 
-        APPLE, ANDROID;
+        APPLE, ANDROID, MAIL;
     }
 
     public long getId() {

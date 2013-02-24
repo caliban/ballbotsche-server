@@ -16,18 +16,12 @@
 package ch.fancytools.ballbotsche.config;
 
 /**
- *
+ * todo. must be fired when the db changes. 
+ * - automatically, check db in an interval?
+ * - listener?
+ * - rest, user must call url after change?
  * @author caliban
  */
-public interface ConstConfig {
+public class ConfigurationChangedEvent {
     
-    
-   String GAME_DAYS_KEY = "game.days";
-   String MIN_NO_OF_PLAYERS_KEY ="min.no.of.players";
-   String MAX_NO_OF_PLAYERS_KEY = "max.no.of.players";
-   String SMTP_HOST_KEY = "smtp.host";
-   String SMTP_PORT_KEY ="smtp.port";
-   String MAIL_FROM_KEY = "mail.from";
-   String MAIL_FROM_PW_KEY ="mail.from.pw";
-   
 }
