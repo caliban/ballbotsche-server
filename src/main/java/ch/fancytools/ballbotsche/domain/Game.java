@@ -15,6 +15,7 @@
  */
 package ch.fancytools.ballbotsche.domain;
 
+import java.io.Serializable;
 import java.util.Calendar;
 import java.util.List;
 import javax.persistence.Entity;
@@ -28,7 +29,7 @@ import javax.persistence.Temporal;
  * @author caliban
  */
 @Entity
-public class Game {
+public class Game implements Serializable {
      @Id
      @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id; 
