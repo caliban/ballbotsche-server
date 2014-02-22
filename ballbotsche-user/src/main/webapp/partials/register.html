@@ -1,0 +1,14 @@
+<form >
+    <p><label>Email:</label> <input type="text" name="player.email" ng:model="player.email" required/></p>
+    <p><label>Name:</label> <input type="text" name="player.name" ng:model="player.name" required/></p>
+    <p><label>Given name:</label> <input type="text" name="player.givenname" ng:model="player.givenname" required/></p>
+    <p> 
+        <button ng:click="cancel()">Cancel</button>
+        <button ng:click="save()">Save</button>
+    </p>
+</form>    
+
+<hr/>
+Debug View:
+<pre>form={{player}} <br>
+email={{player.email}} <br> name={{player.name}} <br> givenname={{player.givenname}}  </pre>

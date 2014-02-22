@@ -1,0 +1,25 @@
+<div>
+    Hello {{currentUser | json}}
+</div>
+
+<div class="panel panel-default">
+      <!-- Default panel contents -->
+      <div class="panel-heading">Timesheet</div>
+
+      <!-- Table -->
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Date</th>
+            <th>Amount (h)</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr ng-repeat="entry in timesheet">
+            <td>{{entry.entryDate}}</td>
+            <td>{{entry.duration}}</td>
+            <td>{{entry.description}}</td>
+          </tr>
+      </table>
+    </div>

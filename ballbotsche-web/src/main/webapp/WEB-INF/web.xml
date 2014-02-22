@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://java.sun.com/xml/ns/javaee"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
+      version="3.0">
+    <display-name>time-web</display-name>
+
+<!-- the rest application is registered in the RestApplication class, which in
+turn is necessary to register the jackson provider. -->
+<!--    <servlet>
+        <servlet-name>restservice</servlet-name>
+        <servlet-class>org.glassfish.jersey.servlet.ServletContainer</servlet-class>
+      
+        <init-param>
+            <param-name>jersey.config.server.provider.packages</param-name>
+            <param-value>ch.thp.proto.time.resources</param-value>
+        </init-param>
+          <load-on-startup>1</load-on-startup>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>restservice</servlet-name>
+        <url-pattern>/rest/*</url-pattern>
+    </servlet-mapping>-->
+    
+    
+    <security-constraint>
+        <web-resource-collection>
+            <web-resource-name>Secure Application</web-resource-name>
+            <url-pattern>/rest/*</url-pattern>
+            <http-method>GET</http-method>
+            <http-method>POST</http-method>
+            <http-method>PUT</http-method>
+            <http-method>DELETE</http-method>
+        </web-resource-collection>
+
+        <auth-constraint>
+            <role-name>testone</role-name>
+        </auth-constraint>
+    </security-constraint>
+
+    <login-config>
+        <auth-method>BASIC</auth-method>
+        <realm-name>timerealm</realm-name>
+    </login-config>
+
+    <security-role>
+        <role-name>testone</role-name>
+    </security-role>
+</web-app>
