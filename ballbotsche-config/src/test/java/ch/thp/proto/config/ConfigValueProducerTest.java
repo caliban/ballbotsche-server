@@ -24,6 +24,7 @@ import org.jboss.shrinkwrap.api.ArchivePaths;
 import org.jboss.shrinkwrap.api.ShrinkWrap;
 import org.jboss.shrinkwrap.api.asset.ByteArrayAsset;
 import org.jboss.shrinkwrap.api.spec.JavaArchive;
+import org.jboss.shrinkwrap.api.spec.WebArchive;
 import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -40,11 +41,12 @@ public class ConfigValueProducerTest {
     private String value;
 
     @Deployment
-    public static JavaArchive createDeployment() {
-        return ShrinkWrap.create(JavaArchive.class, "test.jar")
+    public static WebArchive createDeployment() {
+        return ShrinkWrap.create(WebArchive.class, "test.war")
                 .addPackage(ConfigValueProducer.class.getPackage())
                 .addClass(ConfigEntry.class)
                 .addClass(ConfigTestSupportBean.class)
+                .addAsWebInfResource("jbossas-ds.xml")
                 .addAsResource("test-persistence.xml", "META-INF/persistence.xml")
                 .addAsResource("log4j.properties", "log4j.properties")
                 .addAsManifestResource(
