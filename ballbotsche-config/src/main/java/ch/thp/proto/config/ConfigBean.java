@@ -33,6 +33,6 @@ public class ConfigBean {
      */
     public ConfigEntry getConfigForKey(String key) {
         return em.createNamedQuery("configEntry.getByKey", ConfigEntry.class).setParameter("key", key)
-                .setHint("javax.persistence.cache.storeMode", "REFRESH").getSingleResult();
+                .getSingleResult();
     }
 }
