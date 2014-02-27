@@ -7,7 +7,6 @@
 package ch.thp.proto.config;
 
 import ch.thp.proto.config.domain.ConfigEntry;
-import javax.enterprise.context.ApplicationScoped;
 import javax.enterprise.context.Dependent;
 import javax.enterprise.inject.Produces;
 
@@ -19,7 +18,7 @@ import javax.inject.Inject;
  *
  * @author Thierry
  */
-@ApplicationScoped
+@Dependent
 public class ConfigValueProducer {
     
     @Inject
