@@ -4,24 +4,19 @@
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <groupId>ch.thp.proto</groupId>
-        <artifactId>time-parent</artifactId>
+        <artifactId>ballbotsche-server-parent</artifactId>
         <version>1.0.0-SNAPSHOT</version>
     </parent>
 
-    <artifactId>time-base</artifactId>
+    <artifactId>ballbotsche-base</artifactId>
     <packaging>jar</packaging>
-    <name>Time Base Module</name>
+    <name>Ballbotsche Base Module</name>
     <description>Contains the User mgmt, some basic converters. May be used by any module.</description>
     <dependencies>
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.eclipse.persistence</groupId>
-            <artifactId>eclipselink</artifactId>
-            <scope>provided</scope>
-        </dependency>    
+        </dependency>  
         <dependency>
             <groupId>com.google.guava</groupId>
             <artifactId>guava</artifactId>

@@ -18,19 +18,20 @@ package ch.thp.proto.time.sec;
 import com.google.common.base.Preconditions;
 import com.google.common.collect.Sets;
 import java.util.Set;
-import javax.enterprise.context.RequestScoped;
+import javax.enterprise.context.Dependent;
 import javax.enterprise.inject.Produces;
 import javax.inject.Inject;
 import javax.servlet.http.HttpServletRequest;
 import lombok.extern.slf4j.Slf4j;
 
 /**
- * after some failed attempts like the usage of a filter or a jersey provider and 
- * learning quite a lot about bugs in the current glassfish I finally rembered
- * that the current principal is injectable. 
+ * after some failed attempts like the usage of a filter or a jersey provider
+ * and learning quite a lot about bugs in the current glassfish I finally
+ * rembered that the current principal is injectable.
+ *
  * @author Thierry
  */
-@RequestScoped
+@Dependent
 @Slf4j
 public class RolesProducer {
 
@@ -41,14 +42,12 @@ public class RolesProducer {
     public Set<ApplicationRoles> produceCurrentUser() {
         Preconditions.checkNotNull(req);
         Set<ApplicationRoles> resultingRoles = Sets.newHashSet();
-        for(ApplicationRoles role : ApplicationRoles.values())
-        {
-            if(req.isUserInRole(role.toString().toLowerCase()))
-            {
+        for (ApplicationRoles role : ApplicationRoles.values()) {
+            if (req.isUserInRole(role.toString().toLowerCase())) {
                 resultingRoles.add(role);
             }
         }
-        log.debug("producing roles .."+resultingRoles);
+        log.debug("producing roles .." + resultingRoles);
         return resultingRoles;
     }
-    }
+}
