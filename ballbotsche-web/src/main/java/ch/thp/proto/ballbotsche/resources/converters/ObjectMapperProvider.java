@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package ch.thp.proto.time.resources.converters;
+package ch.thp.proto.ballbotsche.resources.converters;
 
 import javax.ws.rs.ext.ContextResolver;
 import javax.ws.rs.ext.Provider;

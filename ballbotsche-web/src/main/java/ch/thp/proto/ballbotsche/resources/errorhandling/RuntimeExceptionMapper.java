@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package ch.thp.proto.time.resources.errorhandling;
+package ch.thp.proto.ballbotsche.resources.errorhandling;
 
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;

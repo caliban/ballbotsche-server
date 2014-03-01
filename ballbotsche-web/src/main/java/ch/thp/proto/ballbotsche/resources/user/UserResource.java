@@ -13,10 +13,10 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package ch.thp.proto.time.resources.user;
+package ch.thp.proto.ballbotsche.resources.user;
 
-import ch.thp.proto.time.user.CurrentUser;
-import ch.thp.proto.time.user.domain.User;
+import ch.thp.proto.ballbotsche.user.CurrentUser;
+import ch.thp.proto.ballbotsche.user.domain.User;
 import com.google.common.base.Preconditions;
 import javax.inject.Inject;
 import javax.ws.rs.GET;
@@ -36,7 +36,7 @@ public class UserResource {
 
     @GET
     public String get() {
-        Preconditions.checkNotNull(user.getGivenName());
+        Preconditions.checkNotNull(user.getUsername());
         return "bla";
     }
 
@@ -45,7 +45,7 @@ public class UserResource {
     @Produces("application/json")
     public String getCurrentUser() {
 
-        return user.getGivenName();
+        return user.getUsername();
     }
 
 }

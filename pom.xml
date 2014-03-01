@@ -23,6 +23,7 @@
     <modules>
         <module>ballbotsche-config</module>
         <module>ballbotsche-base</module>
+        <module>ballbotsche-testdata</module>
         <module>ballbotsche-web</module>
     </modules>
     <dependencyManagement>
@@ -88,6 +89,11 @@
             <dependency>
                 <groupId>ch.thp.proto</groupId>
                 <artifactId>ballbotsche-base</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>ch.thp.proto</groupId>
+                <artifactId>ballbotsche-testdata</artifactId>
                 <version>${project.version}</version>
             </dependency>
            

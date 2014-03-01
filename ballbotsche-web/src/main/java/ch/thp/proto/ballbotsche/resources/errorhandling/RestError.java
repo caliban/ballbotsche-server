@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package ch.thp.proto.time.resources.errorhandling;
+package ch.thp.proto.ballbotsche.resources.errorhandling;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

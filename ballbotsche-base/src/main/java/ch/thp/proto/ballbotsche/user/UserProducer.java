@@ -13,10 +13,11 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package ch.thp.proto.time.mockdb;
+package ch.thp.proto.ballbotsche.user;
 
-import ch.thp.proto.time.user.CurrentUser;
-import ch.thp.proto.time.user.domain.User;
+import ch.thp.proto.ballbotsche.user.CurrentUser;
+import ch.thp.proto.ballbotsche.user.UserAccessBean;
+import ch.thp.proto.ballbotsche.user.domain.User;
 import com.google.common.base.Preconditions;
 import java.security.Principal;
 import javax.enterprise.context.RequestScoped;
@@ -35,7 +36,7 @@ import lombok.extern.slf4j.Slf4j;
 public class UserProducer {
 
     @Inject
-    private MockDatabase database;
+    private UserAccessBean userAccessBean;
 
     @Inject 
     private Principal currentPrincipal;
@@ -45,6 +46,6 @@ public class UserProducer {
     public User produceCurrentUser() {
         Preconditions.checkNotNull(currentPrincipal);
         log.debug("producing user .."+currentPrincipal.getName());
-        return database.getUserforUserName(currentPrincipal.getName());
+        return userAccessBean.getUserByUserName(currentPrincipal.getName());
     }
 }
