@@ -27,7 +27,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package ch.thp.time.dataloader;
+package ch.thp.ballbotsche.dataloader;
 
 import ch.thp.proto.ballbotsche.user.domain.Group;
 import ch.thp.proto.ballbotsche.user.domain.User;
