@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package ch.thp.proto.time.sec;
+package ch.thp.proto.ballbotsche.sec;
 
 /**
  *

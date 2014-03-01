@@ -13,26 +13,27 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package ch.thp.proto.time.user.domain;
 
+package ch.thp.proto.ballbotsche.user.domain;
+
+import java.io.Serializable;
 import javax.enterprise.inject.Vetoed;
-import lombok.AllArgsConstructor;
+import javax.persistence.Embeddable;
+import javax.persistence.Id;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import lombok.AllArgsConstructor;
 
 /**
  *
  * @author Thierry
  */
 @Data
-@AllArgsConstructor
 @NoArgsConstructor
+@AllArgsConstructor
+@Embeddable
 @Vetoed
-public class User {
-
-    private UserId userId; 
-    private String username;
-    private String givenName;
-    private String familyName;
-
+public class UserId implements Serializable {
+    @Id
+      private String uuId;
 }

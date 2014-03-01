@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 
-package ch.thp.proto.time.user;
+package ch.thp.proto.ballbotsche.user;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;

@@ -13,22 +13,26 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+package ch.thp.proto.ballbotsche.user;
 
-package ch.thp.proto.time.user.domain;
-
-import javax.persistence.Embeddable;
-import lombok.Data;
-import lombok.NoArgsConstructor;
-import lombok.AllArgsConstructor;
+import ch.thp.proto.ballbotsche.user.domain.User;
+import javax.ejb.LocalBean;
+import javax.ejb.Stateless;
+import javax.persistence.EntityManager;
+import javax.persistence.PersistenceContext;
 
 /**
  *
  * @author Thierry
  */
-@Data
-@NoArgsConstructor
-@AllArgsConstructor
-@Embeddable
-public class UserId {
-      private String uuId;
+@Stateless
+@LocalBean
+public class UserAccessBean {
+
+    @PersistenceContext
+    private EntityManager em;
+
+    public User getUserByUserName(String username) {
+        return em.createNamedQuery("user.getByUsername", User.class).getSingleResult();
+    }
 }

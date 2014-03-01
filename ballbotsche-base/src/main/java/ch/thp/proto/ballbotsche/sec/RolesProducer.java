@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package ch.thp.proto.time.sec;
+package ch.thp.proto.ballbotsche.sec;
 
 import com.google.common.base.Preconditions;
 import com.google.common.collect.Sets;
