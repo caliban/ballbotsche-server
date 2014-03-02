@@ -3,7 +3,7 @@
       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
       xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
       version="3.0">
-    <display-name>time-web</display-name>
+    <display-name>ballbotsche-web</display-name>
 
 <servlet-mapping>
 <servlet-name>javax.ws.rs.core.Application</servlet-name>
@@ -22,7 +22,7 @@
         </web-resource-collection>
 
         <auth-constraint>
-            <role-name>testone</role-name>
+            <role-name>users</role-name>
         </auth-constraint>
     </security-constraint>
 

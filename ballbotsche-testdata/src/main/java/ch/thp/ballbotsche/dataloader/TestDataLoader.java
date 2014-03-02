@@ -42,8 +42,10 @@ public class TestDataLoader {
     void init() {
         Group applicationUsers = new Group(UUID.randomUUID().toString(), "ballbotscheUser", "can use the application");
         em.persist(applicationUsers);
-        User userone = new User(new UserId(UUID.randomUUID().toString()), "ned.stark", "test1", Sets.newHashSet(applicationUsers));
-        User usertwo = new User(new UserId(UUID.randomUUID().toString()), "john.snow", "test2", Sets.newHashSet(applicationUsers));
+        //pw: test1
+        User userone = new User(new UserId(UUID.randomUUID().toString()), "ned.stark", "1b4f0e9851971998e732078544c96b36c3d01cedf7caa332359d6f1d83567014", Sets.newHashSet(applicationUsers));
+        //pw: test2
+        User usertwo = new User(new UserId(UUID.randomUUID().toString()), "john.snow", "60303ae22b998861bce3b28f33eec1be758a213c86c93c076dbe9f558c11c752", Sets.newHashSet(applicationUsers));
         em.persist(userone);
         em.persist(usertwo);
     }

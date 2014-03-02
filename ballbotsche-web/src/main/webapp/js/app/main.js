@@ -1,7 +1,7 @@
 'use strict';
 /* Configuration of other Modules */
 angular.module('LocalStorageModule')
-        .value('prefix', 'time')
+        .value('prefix', 'ballbotsche')
         ;
 
 angular.module('services.navigation.config')
@@ -11,14 +11,13 @@ angular.module('services.navigation.config')
         })
         ;
 
-angular.module('time', [
+angular.module('ballbotsche', [
     'ui.router',
     'ngCookies',
     'LocalStorageModule',
     'services.authentication',
     'services.navigation',
-    'services.navigation.config',
-    'timesheet.services']
+    'services.navigation.config']
         )
         .config(function($stateProvider, $urlRouterProvider) {
 
@@ -33,16 +32,6 @@ angular.module('time', [
                 url: '/dashboard',
                 templateUrl: 'partials/dashboard.html',
                 controller: 'DashboardCtrl',
-                resolve: {
-                     timesheet: function(CurrentSheetService, $q)
-                    {
-                        return CurrentSheetService.loadSheet();
-                        
-                    },
-                    currentUser: function(AuthService) {
-                        return AuthService.getCurrentUser();
-                    }
-                   
-                }
+                
             })
         });

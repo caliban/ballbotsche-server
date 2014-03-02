@@ -43,6 +43,8 @@ public class User implements Serializable {
     private UserId userId; 
     private String username;
     private String password;
+    //todo salt it. 
+//    private String salt; 
     @ManyToMany
     @JoinTable(name="USER_GROUPS")
     private Set<Group> groups; 

@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('time')
+angular.module('ballbotsche')
     .controller('LoginCtrl', ['AuthService', '$scope', '$http', '$rootScope', function (auth, $scope, $http, $rootScope) {
 
         if ($rootScope.currentUser) {
