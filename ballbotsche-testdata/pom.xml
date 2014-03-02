@@ -8,9 +8,9 @@
         <version>1.0.0-SNAPSHOT</version>
     </parent>
 
-    <artifactId>time-testdata</artifactId>
+    <artifactId>ballbotsche-testdata</artifactId>
     <packaging>jar</packaging>
-    <name>Time Testdata Module</name>
+    <name>Ballbotsche Testdata Module</name>
     <dependencies>
         <dependency>
             <groupId>org.projectlombok</groupId>

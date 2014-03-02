@@ -28,10 +28,10 @@
 
     <login-config>
         <auth-method>BASIC</auth-method>
-        <realm-name>timerealm</realm-name>
+        <realm-name>ballbotscheRealm</realm-name>
     </login-config>
 
     <security-role>
-        <role-name>testone</role-name>
+        <role-name>users</role-name>
     </security-role>
 </web-app>

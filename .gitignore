@@ -1,7 +1,1 @@
-/target/**
-/time-base/target/
-/time-config/target/
-/time-testdata/target/
-/ballbotsche-base/target/
-/ballbotsche-config/target/
-/ballbotsche-testdata/target/
+**/target/
