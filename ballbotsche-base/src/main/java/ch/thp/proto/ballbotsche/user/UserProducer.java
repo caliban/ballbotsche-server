@@ -15,9 +15,7 @@
  */
 package ch.thp.proto.ballbotsche.user;
 
-import ch.thp.proto.ballbotsche.user.CurrentUser;
-import ch.thp.proto.ballbotsche.user.UserAccessBean;
-import ch.thp.proto.ballbotsche.user.domain.User;
+import ch.thp.proto.ballbotsche.user.domain.BallbotscheUser;
 import com.google.common.base.Preconditions;
 import java.security.Principal;
 import javax.enterprise.context.RequestScoped;
@@ -43,7 +41,7 @@ public class UserProducer {
     
     @Produces
     @CurrentUser
-    public User produceCurrentUser() {
+    public BallbotscheUser produceCurrentUser() {
         Preconditions.checkNotNull(currentPrincipal);
         log.debug("producing user .."+currentPrincipal.getName());
         return userAccessBean.getUserByUserName(currentPrincipal.getName());

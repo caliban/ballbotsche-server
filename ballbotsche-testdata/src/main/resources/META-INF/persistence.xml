@@ -6,6 +6,10 @@
         http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd">
     <persistence-unit name="test">
         <jta-data-source>jdbc/h2dev</jta-data-source>
+        <exclude-unlisted-classes>true</exclude-unlisted-classes>
+        <class>ch.thp.proto.ballbotsche.user.domain.BallbotscheGroup</class>
+        <class>ch.thp.proto.ballbotsche.user.domain.BallbotscheUser</class>
+       
         <properties>
             <property name="hibernate.hbm2ddl.auto" value="create-drop"/>
             <property name="hibernate.show_sql" value="true"/>

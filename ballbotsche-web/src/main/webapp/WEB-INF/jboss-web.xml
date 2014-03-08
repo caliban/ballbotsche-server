@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <jboss-web>
+    <security-domain>ballbotsche-realm</security-domain>
   <context-root>/ballbotsche-web</context-root>
 </jboss-web>

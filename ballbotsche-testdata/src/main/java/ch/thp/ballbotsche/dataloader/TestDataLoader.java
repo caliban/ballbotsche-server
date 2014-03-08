@@ -15,14 +15,15 @@
  */
 package ch.thp.ballbotsche.dataloader;
 
-import ch.thp.proto.ballbotsche.user.domain.Group;
-import ch.thp.proto.ballbotsche.user.domain.User;
+import ch.thp.proto.ballbotsche.user.domain.BallbotscheGroup;
+import ch.thp.proto.ballbotsche.user.domain.BallbotscheUser;
 import ch.thp.proto.ballbotsche.user.domain.UserId;
 import com.google.common.collect.Sets;
 import java.util.UUID;
 import javax.annotation.PostConstruct;
 import javax.ejb.LocalBean;
 import javax.ejb.Singleton;
+import javax.ejb.Startup;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 
@@ -33,6 +34,7 @@ import javax.persistence.PersistenceContext;
  */
 @Singleton
 @LocalBean
+@Startup
 public class TestDataLoader {
 
     @PersistenceContext
@@ -40,12 +42,13 @@ public class TestDataLoader {
 
     @PostConstruct
     void init() {
-        Group applicationUsers = new Group(UUID.randomUUID().toString(), "ballbotscheUser", "can use the application");
+        BallbotscheGroup applicationUsers = new BallbotscheGroup(UUID.randomUUID().toString(), "ballbotscheUser", "can use the application");
         em.persist(applicationUsers);
+        // http://approsto.com/sha-generator/
         //pw: test1
-        User userone = new User(new UserId(UUID.randomUUID().toString()), "ned.stark", "1b4f0e9851971998e732078544c96b36c3d01cedf7caa332359d6f1d83567014", Sets.newHashSet(applicationUsers));
-        //pw: test2
-        User usertwo = new User(new UserId(UUID.randomUUID().toString()), "john.snow", "60303ae22b998861bce3b28f33eec1be758a213c86c93c076dbe9f558c11c752", Sets.newHashSet(applicationUsers));
+        BallbotscheUser userone = new BallbotscheUser(new UserId(UUID.randomUUID().toString()), "ned.stark", "G08OmFGXGZjnMgeFRMlrNsPQHO33yqMyNZ1vHYNWcBQ", Sets.newHashSet(applicationUsers));
+        //pw: test1
+        BallbotscheUser usertwo = new BallbotscheUser(new UserId(UUID.randomUUID().toString()), "john.snow", "G08OmFGXGZjnMgeFRMlrNsPQHO33yqMyNZ1vHYNWcBQ", Sets.newHashSet(applicationUsers));
         em.persist(userone);
         em.persist(usertwo);
     }

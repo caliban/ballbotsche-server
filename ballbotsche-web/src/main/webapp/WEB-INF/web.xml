@@ -28,7 +28,7 @@
 
     <login-config>
         <auth-method>BASIC</auth-method>
-        <realm-name>ballbotscheRealm</realm-name>
+        <realm-name>ballbotsche-realm</realm-name>
     </login-config>
 
     <security-role>

@@ -13,26 +13,32 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package ch.thp.proto.ballbotsche.user;
 
-import ch.thp.proto.ballbotsche.user.domain.BallbotscheUser;
-import javax.ejb.LocalBean;
-import javax.ejb.Stateless;
-import javax.persistence.EntityManager;
-import javax.persistence.PersistenceContext;
+package ch.thp.proto.ballbotsche.user.domain;
+
+import java.io.Serializable;
+import javax.enterprise.inject.Vetoed;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
 /**
  *
  * @author Thierry
  */
-@Stateless
-@LocalBean
-public class UserAccessBean {
-
-    @PersistenceContext
-    private EntityManager em;
-
-    public BallbotscheUser getUserByUserName(String username) {
-        return em.createNamedQuery("user.getByUsername", BallbotscheUser.class).getSingleResult();
-    }
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
+@Vetoed
+@Entity
+@Table(name = "BALLBOTSCHE_GROUP")
+public class BallbotscheGroup implements Serializable{
+    @Id
+    private String uuid; 
+    private String name; 
+    private String description; 
+    
 }

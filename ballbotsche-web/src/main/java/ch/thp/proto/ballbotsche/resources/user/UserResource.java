@@ -16,7 +16,7 @@
 package ch.thp.proto.ballbotsche.resources.user;
 
 import ch.thp.proto.ballbotsche.user.CurrentUser;
-import ch.thp.proto.ballbotsche.user.domain.User;
+import ch.thp.proto.ballbotsche.user.domain.BallbotscheUser;
 import com.google.common.base.Preconditions;
 import javax.inject.Inject;
 import javax.ws.rs.GET;
@@ -32,7 +32,7 @@ public class UserResource {
 
     @Inject
     @CurrentUser
-    private User user;
+    private BallbotscheUser user;
 
     @GET
     public String get() {

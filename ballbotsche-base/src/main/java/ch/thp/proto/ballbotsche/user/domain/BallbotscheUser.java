@@ -23,6 +23,7 @@ import javax.persistence.Entity;
 import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
 import javax.persistence.NamedQuery;
+import javax.persistence.Table;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -36,8 +37,9 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @Vetoed
 @Entity
-@NamedQuery(name = "user.getByUsername", query="SELECT u FROM User u WHERE u.username = :uname")
-public class User implements Serializable {
+@Table(name = "BALLBOTSCHE_USER")
+@NamedQuery(name = "user.getByUsername", query="SELECT u FROM BallbotscheUser u WHERE u.username = :uname")
+public class BallbotscheUser implements Serializable {
 
     @EmbeddedId
     private UserId userId; 
@@ -47,6 +49,6 @@ public class User implements Serializable {
 //    private String salt; 
     @ManyToMany
     @JoinTable(name="USER_GROUPS")
-    private Set<Group> groups; 
+    private Set<BallbotscheGroup> groups; 
 
 }
