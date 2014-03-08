@@ -34,6 +34,5 @@ import lombok.AllArgsConstructor;
 @Embeddable
 @Vetoed
 public class UserId implements Serializable {
-    @Id
       private String uuId;
 }

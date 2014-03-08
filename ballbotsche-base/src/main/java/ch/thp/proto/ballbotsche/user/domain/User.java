@@ -36,7 +36,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @Vetoed
 @Entity
-@NamedQuery(name = "user.getByUsername", query="select User u where u.username:= uname")
+@NamedQuery(name = "user.getByUsername", query="SELECT u FROM User u WHERE u.username = :uname")
 public class User implements Serializable {
 
     @EmbeddedId
